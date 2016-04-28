@@ -8,7 +8,7 @@ module.exports = function(app, publicDir){
 
     var routesDir = '../app/routes/';
 
-//    require(routesDir + 'something.routes.js');
+    require(routesDir + 'web_app.routes.js')(app);
 
     console.log('    routes initialized.');
 };
