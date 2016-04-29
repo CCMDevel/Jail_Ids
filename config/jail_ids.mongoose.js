@@ -5,7 +5,7 @@ module.exports = function(){
 
     var modelsDir = '../app/models/';
 
-//    require(modelsDir + 'something.model.js');
+    require(modelsDir + 'person.model.js');
 
     return db;    
 };
