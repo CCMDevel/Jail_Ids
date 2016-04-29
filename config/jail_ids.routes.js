@@ -1,14 +1,14 @@
-module.exports = function(app, publicDir){
+module.exports = function(app, homeDir){
     console.log('    initializing routes...');
 
-    if (publicDir){
-        app.use(require('express').static(publicDir));
+    if (homeDir){
+        app.use(require('express').static(homeDir + "/public"));
         console.log('        /public directory initialized.'); 
     }
 
     var routesDir = '../app/routes/';
 
-    require(routesDir + 'web_app.routes.js')(app);
+    require(routesDir + 'web_app.routes.js')(app, homeDir);
 
     console.log('    routes initialized.');
 };

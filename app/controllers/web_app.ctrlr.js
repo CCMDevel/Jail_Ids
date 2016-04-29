@@ -1,8 +1,8 @@
-module.exports = function(){
+module.exports = function(homeDir){
     var ctrlr = {};
 
     ctrlr.getHome = function(req, res, next){
-        res.redirect("/home.html");
+        res.sendfile(homeDir + "/app/views/home.html");
     };
 
     return ctrlr;
