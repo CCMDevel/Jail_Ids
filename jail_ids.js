@@ -3,7 +3,7 @@ var app = require('./config/jail_ids.express.js');
 var db = require('./config/jail_ids.mongoose.js');
 
 db = db();
-app = app(__dirname + "/public");
+app = app(__dirname);
 
 app.set('port', port);
 app.listen(app.get('port'), function(){
