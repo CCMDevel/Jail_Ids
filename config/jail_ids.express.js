@@ -11,6 +11,7 @@ module.exports = function(publicDir){
     app.use(bodyParser.urlencoded({
         extended : true
     }));
+    app.use(bodyParser.json());
 
     jail_ids_routes(app, publicDir);
     return app;
